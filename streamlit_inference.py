@@ -11,7 +11,7 @@ from ultralytics.utils.checks import check_requirements
 from ultralytics.utils.downloads import GITHUB_ASSETS_STEMS
 
 import os  # Add this import for environment check
-
+from pathlib import Path
 
 class Inference:
     """
@@ -141,7 +141,7 @@ class Inference:
                     out.write(g.read())  # Read bytes into file
                 self.vid_file_name = "ultralytics.mp4"
         elif self.source == "webcam":
-            self.vid_file_name = 0  # Use webcam index 0
+            self.vid_file_name = 2  # Use webcam index 0
 
     def configure(self):
         """Configure the model and load selected classes for inference."""
