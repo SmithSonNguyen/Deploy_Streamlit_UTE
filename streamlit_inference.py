@@ -13,6 +13,7 @@ from ultralytics.utils.downloads import GITHUB_ASSETS_STEMS
 import os  # Add this import for environment check
 from pathlib import Path
 
+
 class Inference:
     """
     A class to perform object detection, image classification, image segmentation and pose estimation inference.
@@ -141,7 +142,7 @@ class Inference:
                     out.write(g.read())  # Read bytes into file
                 self.vid_file_name = "ultralytics.mp4"
         elif self.source == "webcam":
-            self.vid_file_name = 2  # Use webcam index 0
+            self.vid_file_name = 1  # Use webcam index 0
 
     def configure(self):
         """Configure the model and load selected classes for inference."""
